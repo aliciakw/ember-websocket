@@ -1,0 +1,22 @@
+{
+  "name": "realtime-server",
+  "description": "providing real-time sychronization for ruby on rails",
+  "version": "0.0.1",
+  "dependencies": {
+    "cookie": "0.1.x",
+    "express": "^4.13.3",
+    "forever": "0.10.x",
+    "forever-monitor": "1.2.x",
+    "nodemon": "1.x",
+    "nodetime": "0.8.x",
+    "pg": "2.11.0",
+    "redis": "0.7.3",
+    "sentry-node": "0.2.x",
+    "socket.io": "1.0.x",
+    "underscore": "1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mikeatlas/realtime-server.git"
+  }
+}

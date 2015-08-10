@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RealtimeRails</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- required: realtime support framework -->
+  <%= realtime_support %>
+  <!-- optional: message_handler dequeues realtime messages into Backbone.js style events -->
+  <%= realtime_message_handler %>
+  <!-- optional: message_console_logger listens or dequeues realtime messages to the browser console -->
+  <%= realtime_message_console_logger %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
