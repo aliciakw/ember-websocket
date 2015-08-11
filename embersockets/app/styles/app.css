@@ -1,0 +1,25 @@
+body {
+    font-family: 'Lane-Narrow', 'Arial', Sans-Serif;
+    padding: 10px;
+    text-align: center;
+    background-color: #FFC8B4;
+}
+
+.main-header {
+    margin-bottom: 15px;
+}
+
+.new-ticket {
+    background: white;
+    border-top: 3px solid #2196F3;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+input, textarea {
+    margin: 10px;
+    width: 40%;
+}

@@ -1,0 +1,32 @@
+<script>
+  var socket = io.connect('http://localhost:5001');
+  socket.on('connect', function(data) {
+    socket.emit('join', 'Hello World from client');
+  });
+</script>
+<header class="page-header">
+  <h1>Helpdesk Jobs :)</h1>
+</header>
+
+{{#each tickets as |ticket|}}
+  <section class="job">
+    <header>
+      <h3>{{ticket.name}}</h3>
+    </header>
+    <article>
+      <p>{{ticket.description}}</p>
+    </article>
+    <footer>
+      <p>
+        <strong>Created On</strong> {{ticket.createdAt}}
+      </p>
+    </footer>
+  </section>
+{{/each}}
+
+<form class="new-job" {{action "submitTicket" on="submit"}}>
+  <h2>Submit a Job</h2>
+  {{input placeholder="Your name" value=name}}<br/>
+  {{textarea placeholder="What's wrong?" value=description}} <br/>
+  <button type="submit">Submit Job</button>
+</form>
