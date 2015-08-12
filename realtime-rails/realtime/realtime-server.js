@@ -1,5 +1,6 @@
 var express = require('express');
 var io = require('socket.io').listen(5001);
+
 var redis = require('redis').createClient();
 redis.subscribe('rt-change');
 console.log('SERVER STARTED at PORT 5001');

@@ -17,8 +17,8 @@
       socket.on('connect', function(data) {
         socket.emit('join', 'Hello World from client');
       });
-      socket.on('broad', function(data) {
-        console.log('broad: ' + data);
+      socket.on('live-changes', function(data) {
+        console.log('websocket: ' + data);
         $('#future').html(data);
       });
       $('form').submit(function(e){
