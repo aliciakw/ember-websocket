@@ -155,6 +155,22 @@ You can also contact the websocket from Ember via actions.
  
 # II. Set Up the Books Index Page to update without page refresh using the Websocket
 
+In Rails:  
+*  add books controller to the API
+*  serializers/book_serializer.rb
+
+In Ember:    
+*  create books route, template, and controller, & add it to the router.js
+
+routes/books.js
+
+    import Ember from 'ember';
+    export default Ember.Route.extend({
+      model: function(){
+        return this.store.findAll('book');
+      }
+    });
+
 controllers/books.js  
 
     import Ember from 'ember';
@@ -182,7 +198,9 @@ controllers/books.js
     
 So now, if you open up the rails console and Create or Update any books, when you commit the changes to the database, callbacks in the Rails Book model send a message containing the record (as JSON) that was updated to the websocket through Redis. When the websocket server receives the message from Redis, it sends it off to the Ember app. When the Ember app receives the notification that a record has changed, the new file data is "pushed" into the datastore, causing the data displayed to instantly update, without the user having to refresh the page or anything. 
 
-###### This still has some problems!
+
+
+## III. This all still has some problems!
 
 * Right now you need to start everything up in the right order or there are problems: 
   1. ` bundle exec rails s`
