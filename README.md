@@ -204,6 +204,7 @@ So now, if you open up the rails console and Create or Update any books, when yo
 
 * Right now you need to start everything up in the right order or there are problems: 
   1. ` bundle exec rails s`
+
   2. ` ember server` and load the page at localhost:4200 in your browser to display all of the data.
   3. ` node ws-server.js` and refresh the page at localhost:4200 in your browser.
   4. Now everything should be working properly unless you change any ember code, in which case you will have to stop the websocket server, rerender the ember page without the websocket connection, and then restart the websocket server, and then refresh the page at localhost:4200 again. 
