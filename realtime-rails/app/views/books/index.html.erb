@@ -1,0 +1,12 @@
+<h1><em>La Librarie</em></h1>
+<h2>All the Books!</h2>
+<ul>
+  <% @books.each do |b|%>
+    <li><b><%= b.title %></b> by <%= b.author %></li>
+  <% end %>
+</ul>
+
+<h2>Message Board</h2>
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>

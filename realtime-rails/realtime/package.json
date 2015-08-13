@@ -1,0 +1,15 @@
+{
+  "name": "realtime",
+  "version": "1.0.0",
+  "description": "Node server to run socket.io on a realtime rails app",
+  "main": "realtime-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "",
+    "socket.io": ""
+  }
+}
