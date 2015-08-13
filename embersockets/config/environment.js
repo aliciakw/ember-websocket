@@ -17,9 +17,6 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-
-    // blog post told me to add this:
-    // *** http://www.programwitherik.com/getting-started-with-web-sockets-and-ember/ ***
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",

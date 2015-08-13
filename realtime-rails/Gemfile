@@ -42,3 +42,9 @@ gem 'spring',        group: :development
 
 gem 'realtime'
 gem 'redis'
+
+gem "grape", '0.11.0'
+gem "grape-swagger"
+gem "active_model_serializers"
+gem "grape-active_model_serializers"
+gem "grape-swagger-rails"

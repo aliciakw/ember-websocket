@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('books', function(){});
   this.route('helpdesk', {path: '/'});
   this.route('chat');
 });
