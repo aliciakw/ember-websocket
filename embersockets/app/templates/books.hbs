@@ -1,0 +1,10 @@
+<div style="width: 80%; margin-left: 10%; margin-right: 10%;">
+  <h2><em>La Biblioteca</em></h2>
+  <div style="text-align:left">
+    {{#each model}}
+      <p><strong>{{title}}</strong> by {{author}} ({{num_pages}} pages)</p>
+    {{/each}}
+  </div>
+  <button id="sendButtonPressed" {{action "sendButtonPressed"}}>Press Me</button>
+  <p>Message: {{message}}</p>
+</div>

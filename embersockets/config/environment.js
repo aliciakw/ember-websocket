@@ -1,10 +1,13 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+  var base_server = "localhost:3000";
+
   var ENV = {
     modulePrefix: 'embersockets',
     environment: environment,
     baseURL: '/',
+    serverURL: 'http://' + base_server,
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -21,7 +24,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
-      'connect-src': "'self' ws://localhost:7000 localhost:7000",
+      'connect-src': "'self' ws://localhost:7000 localhost:7000 localhost:3000",
       'img-src': "'self'",
       'report-uri':"'localhost'",
       'style-src': "'self' 'unsafe-inline'",
@@ -31,10 +34,10 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {

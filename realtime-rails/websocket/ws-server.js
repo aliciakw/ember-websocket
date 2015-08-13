@@ -15,11 +15,9 @@ ws.on('connection', function connection(ws) {
     console.log('received: %s', message);
   });
 
-  ws.send('Hey! Welcome to my websocket challenge!');
-
-  redis.on('message', function(channel, message){
-    console.log('REDIS: '+ message); // this sends the data but there's something weird with the object
-    ws.send(message);
+  redis.on('message', function(channel, data){
+    console.log('REDIS: '+ data);
+    ws.send(data);
   });
 
 });
