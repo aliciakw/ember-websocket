@@ -116,6 +116,7 @@ Add a content security policy to the ENV= { … } in config/environment.js. Othe
 In controller files that make use of the websocket:
 Add an init function that finds the websocket connection, saves it to a variable, and maps controller functions to socket messages/states
 You can also contact the websocket from Ember via actions.
+
     ...
     init: function() {
         this._super();
